@@ -1,3 +1,5 @@
+import '../Button.css'
+
 const Button = ({children,onClick,style}) =>{
     return (<div className='main'>
         <button className="btn btn-primary rounded-pill" onClick={onClick} style={style}>
