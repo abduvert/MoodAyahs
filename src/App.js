@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 function App(){
   const [mood, setMood] = useState("")
-  const [setKey] = useState(0);
+  const [key,setKey] = useState(0);
 
   const handleClick = (text) => {
     console.log(text)
@@ -22,7 +22,7 @@ function App(){
   <h2>{mood.toUpperCase()}</h2>
    {mood && (
         <div className="ayahDiv">
-          <Ayah mood={mood} />
+          <Ayah key={key} mood={mood} />
         </div>
       )}
 

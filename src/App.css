@@ -1,41 +1,60 @@
-/* additonal */
-
-body{
+/* Global styles */
+body {
   background-color: cornsilk;
+  font-family: Arial, sans-serif;
 }
 
 .center {
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 2em;
-  margin: 0;
 }
 
-
-.primaryCont,.ayahDiv{
+.primaryCont {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.primaryCont > * {
+  flex: 1 1 120px; /* Adjust item width as needed */
+}
+
+.ayahDiv {
+  max-width: 600px; /* Adjust maximum width as needed */
+  margin: 0 auto;
   padding: 1em;
-  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.verseNumber{
-    font-size: medium;
-    font-weight: 600;
+.verseNumber {
+  font-size: medium;
+  font-weight: 600;
 }
 
-.verse{
+.verse {
   font-size: large;
   font-weight: 400;
 }
 
+/* Media queries for larger screens */
+@media (min-width: 768px) { /* Tablets and larger screens */
+  .center {
+    justify-content: center; /* Center content horizontally */
+    height: 100vh; /* Adjust height as needed */
+  }
 
+  .primaryCont {
+    gap: 1em; /* Increase gap between buttons */
+  }
 
+  .primaryCont > * {
+    flex: 0 1 auto; /* Adjust item flexibility */
+    margin: 0 0.5em; /* Adjust margin between items */
+  }
+}

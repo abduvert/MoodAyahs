@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../App.css'
 
 
-const Ayah = ({ mood }) => {
+const Ayah = ({ key, mood }) => {
     const [ayahs, setAyahs] = useState([]);
     
     useEffect(() => {
