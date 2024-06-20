@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 function App(){
   const [mood, setMood] = useState("")
-  const [key, setKey] = useState(0);
+  const [setKey] = useState(0);
 
   const handleClick = (text) => {
     console.log(text)
